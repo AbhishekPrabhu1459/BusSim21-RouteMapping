@@ -4,40 +4,54 @@ from optimization.route_generator import (
     generate_random_route
 )
 
-from data.hub_data import hub_stops
+from simulation.city_graph import city_graph
 
 
 def generate_route_network(num_routes=4):
 
+    all_stops = list(city_graph.nodes)
+
+    uncovered_stops = set(all_stops)
+
     routes = []
 
-    # First route starts normally
-    first_route = generate_random_route()
+    while len(routes) < num_routes:
 
-    routes.append(first_route)
+        route = generate_random_route()
 
-    # Remaining routes must connect
-    for _ in range(num_routes - 1):
+        # Remove covered stops
+        uncovered_stops -= set(route.stops)
 
-        connected = False
+        # Require overlap with existing routes
+        if routes:
 
-        while not connected:
+            connected = False
 
-            route = generate_random_route()
-
-            # Check overlap with existing routes
             for existing_route in routes:
 
                 overlap = set(route.stops).intersection(
                     existing_route.stops
                 )
 
-                # Require at least one shared stop
                 if overlap:
                     connected = True
                     break
 
-            if connected:
-                routes.append(route)
+            if not connected:
+                continue
+
+        routes.append(route)
+
+    # Add uncovered stops manually
+    for stop in uncovered_stops:
+
+        connected_stop = random.choice(all_stops)
+
+        route = generate_random_route()
+
+        if stop not in route.stops:
+            route.stops.append(stop)
+
+        routes.append(route)
 
     return routes
