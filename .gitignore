@@ -1,0 +1,55 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Streamlit cache
+.streamlit/
+
+# Matplotlib cache
+.matplotlib/
+
+# Generated data
+generated/
+exports/
+results/
+
+# Large datasets
+data/raw/
+
+# Temporary files
+tmp/
+temp/
+
+
+*.sqlite3
+*.db
