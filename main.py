@@ -1,19 +1,20 @@
-from optimization.route_generator import generate_random_route
-from optimization.scoring import calculate_route_score
+from data.bus_data import buses
 
-best_route = None
-best_score = -1
+from optimization.network_generator import (
+    generate_route_network
+)
 
-for _ in range(100):
+from optimization.network_scoring import (
+    calculate_network_score
+)
 
-    route = generate_random_route()
+routes = generate_route_network(len(buses))
 
-    score = calculate_route_score(route)
+score = calculate_network_score(routes)
 
-    if score > best_score:
-        best_score = score
-        best_route = route
+for i, route in enumerate(routes):
 
-print("BEST ROUTE:")
-print(best_route)
-print(best_score)
+    print(f"Route {i + 1}: {route}")
+
+print()
+print("NETWORK SCORE:", score)

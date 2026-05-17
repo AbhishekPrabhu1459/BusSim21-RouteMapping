@@ -2,6 +2,7 @@ import random
 
 from simulation.city_graph import city_graph
 from simulation.routes import Route
+from data.hub_data import hub_stops
 
 
 def generate_random_route(length=5):
@@ -12,7 +13,10 @@ def generate_random_route(length=5):
         if len(list(city_graph.neighbors(stop))) > 0
     ]
 
-    start_stop = random.choice(valid_stops)
+    if random.random() < 0.5:
+        start_stop = random.choice(hub_stops)
+    else:
+        start_stop = random.choice(valid_stops)
 
     route = [start_stop]
 
