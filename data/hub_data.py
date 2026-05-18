@@ -1,10 +1,10 @@
 suburb_hubs = {
 
-    "Old Town": "Old Town Central",
+    "Astra Park": "Media Centre Astra",
 
-    "Westfield": "Westfield Central",
+    "Siegwalden": "Siegwalden",
 
-    "Industrial Zone": "Industrial Hub",
+    "Oakville": "Oakville Central",
 
-    "Airport": "Airport Terminal",
+    "Industrial Zone": "Harbour Distribution Centre",
 }

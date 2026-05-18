@@ -4,87 +4,167 @@ from simulation.stops import BusStop
 stops = [
 
     # =====================================
-    # OLD TOWN / CBD
+    # ASTRA PARK
     # =====================================
 
     BusStop(
-        "Old Town Central",
+        "Media Centre Astra",
         "commercial",
-        "Old Town",
-        "urban_core",
-        hub_level=10
+        "Astra Park",
+        "suburban",
+        hub_level=9
     ),
 
     BusStop(
-        "Old Town East",
+        "Stocker Square",
         "commercial",
-        "Old Town",
-        "urban_core",
-        hub_level=8
-    ),
-
-    BusStop(
-        "Old Town South",
-        "commercial",
-        "Old Town",
-        "urban_core",
-        hub_level=7
-    ),
-
-    # =====================================
-    # WESTFIELD
-    # =====================================
-
-    BusStop(
-        "Westfield Central",
-        "residential",
-        "Westfield",
+        "Astra Park",
         "suburban",
         hub_level=6
     ),
 
     BusStop(
-        "Westfield North",
+        "South Spoke",
         "residential",
-        "Westfield",
-        "suburban"
+        "Astra Park",
+        "suburban",
+        hub_level=7
     ),
 
     BusStop(
-        "Westfield South",
+        "North Spoke",
         "residential",
-        "Westfield",
-        "suburban"
+        "Astra Park",
+        "suburban",
+        hub_level=5
     ),
 
+    BusStop(
+        "East Spoke",
+        "residential",
+        "Astra Park",
+        "suburban",
+        hub_level=4
+    ),
+
+    BusStop(
+        "West Spoke",
+        "residential",
+        "Astra Park",
+        "suburban",
+        hub_level=4
+    ),
+
+    BusStop(
+        "Zellerman Research Center",
+        "education",
+        "Astra Park",
+        "suburban",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Astra Promenade",
+        "commercial",
+        "Astra Park",
+        "suburban",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Greens Square",
+        "commercial",
+        "Astra Park",
+        "suburban",
+        hub_level=6
+    ),
+    # =====================================
+    # SIEGWALDEN
+    # =====================================
+
+    BusStop(
+        "Siegwalden",
+        "commercial",
+        "Siegwalden",
+        "suburban",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Siegwalden Lido",
+        "recreation",
+        "Siegwalden",
+        "suburban",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Siegwalden Secondary School",
+        "education",
+        "Siegwalden",
+        "suburban",
+        hub_level=5
+    ),
+    # =====================================
+    # OAKVILLE
+    # =====================================
+
+    BusStop(
+        "Oakville Central",
+        "commercial",
+        "Oakville",
+        "suburban",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Oak Street",
+        "residential",
+        "Oakville",
+        "suburban",
+        hub_level=4
+    ),
+
+    BusStop(
+        "Old Sawmill",
+        "industrial",
+        "Oakville",
+        "suburban",
+        hub_level=5
+    ),
     # =====================================
     # INDUSTRIAL ZONE
     # =====================================
 
     BusStop(
-        "Industrial Hub",
+        "Harbour Distribution Centre",
         "industrial",
         "Industrial Zone",
         "industrial",
-        hub_level=9
+        hub_level=10
     ),
 
     BusStop(
-        "Industrial East",
+        "Boos Corp Warehouses",
         "industrial",
         "Industrial Zone",
-        "industrial"
+        "industrial",
+        hub_level=7
     ),
 
-    # =====================================
-    # AIRPORT
-    # =====================================
+    BusStop(
+        "Water Treatment Plant",
+        "industrial",
+        "Industrial Zone",
+        "industrial",
+        hub_level=5
+    ),
 
     BusStop(
-        "Airport Terminal",
-        "transport",
-        "Airport",
-        "regional",
-        hub_level=8
+        "Shipwrights Alley",
+        "industrial",
+        "Industrial Zone",
+        "industrial",
+        hub_level=6
     ),
 ]
