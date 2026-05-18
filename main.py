@@ -1,53 +1,98 @@
 from data.bus_data import buses
 
-from optimization.connected_network_generator import (
-    generate_connected_network
+from optimization.network_generator import (
+    generate_route_network
 )
 
 from optimization.network_scoring import (
     calculate_network_score
 )
 
-# ==================================================
-# GENERATE CONNECTED TRANSIT NETWORK
-# ==================================================
+# =========================================
+# GENERATE OPTIMIZED ROUTES
+# =========================================
 
-routes = generate_connected_network(
+routes = generate_route_network()
+
+# =========================================
+# ASSIGN ONLY NECESSARY BUSES
+# =========================================
+
+required_buses = min(
+    len(routes),
     len(buses)
 )
 
-# ==================================================
+for i in range(required_buses):
+
+    buses[i].assign_route(
+        routes[i]
+    )
+
+# =========================================
 # CALCULATE NETWORK SCORE
-# ==================================================
+# =========================================
 
 score = calculate_network_score(routes)
 
-# ==================================================
-# ASSIGN ROUTES TO BUSES
-# ==================================================
-
-for bus, route in zip(buses, routes):
-
-    bus.assign_route(route)
-
-# ==================================================
-# OUTPUT RESULTS
-# ==================================================
+# =========================================
+# OUTPUT ACTIVE BUSES
+# =========================================
 
 print()
-print("=== GENERATED TRANSIT NETWORK ===")
+print("=== ACTIVE BUSES ===")
 print()
 
-for bus in buses:
+for i in range(required_buses):
+
+    bus = buses[i]
 
     print(
-        f"Bus {bus.bus_id} "
-        f"(Capacity: {bus.capacity})"
+        f"Bus {bus.bus_id}"
     )
 
-    print(f"Route: {bus.route.stops}")
+    print(
+        f"Capacity: {bus.capacity}"
+    )
+
+    print(
+        f"Route Type: "
+        f"{bus.route.route_type}"
+    )
+
+    print(
+        f"Route: "
+        f"{bus.route.stops}"
+    )
 
     print()
 
+# =========================================
+# OUTPUT UNUSED BUSES
+# =========================================
+
+unused_buses = buses[required_buses:]
+
+print()
+print("=== UNUSED BUSES ===")
+print()
+
+if unused_buses:
+
+    for bus in unused_buses:
+
+        print(
+            f"Bus {bus.bus_id} unused"
+        )
+
+else:
+
+    print("No unused buses")
+
+# =========================================
+# NETWORK SCORE
+# =========================================
+
+print()
 print("NETWORK SCORE:", score)
 print()

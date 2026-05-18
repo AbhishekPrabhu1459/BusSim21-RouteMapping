@@ -1,57 +1,42 @@
-import random
-
-from optimization.route_generator import (
-    generate_random_route
+from optimization.feeder_generator import (
+    generate_feeder_route
 )
 
-from simulation.city_graph import city_graph
+from optimization.trunk_generator import (
+    generate_trunk_route
+)
+
+from optimization.express_generator import (
+    generate_express_route
+)
 
 
-def generate_route_network(num_routes=4):
-
-    all_stops = list(city_graph.nodes)
-
-    uncovered_stops = set(all_stops)
+def generate_route_network():
 
     routes = []
 
-    while len(routes) < num_routes:
+    # =====================================
+    # FEEDER ROUTES
+    # =====================================
 
-        route = generate_random_route()
+    feeder_1 = generate_feeder_route()
 
-        # Remove covered stops
-        uncovered_stops -= set(route.stops)
+    routes.append(feeder_1)
 
-        # Require overlap with existing routes
-        if routes:
+    # =====================================
+    # TRUNK ROUTES
+    # =====================================
 
-            connected = False
+    trunk_1 = generate_trunk_route()
 
-            for existing_route in routes:
+    routes.append(trunk_1)
 
-                overlap = set(route.stops).intersection(
-                    existing_route.stops
-                )
+    # =====================================
+    # EXPRESS ROUTES
+    # =====================================
 
-                if overlap:
-                    connected = True
-                    break
+    express_1 = generate_express_route()
 
-            if not connected:
-                continue
-
-        routes.append(route)
-
-    # Add uncovered stops manually
-    for stop in uncovered_stops:
-
-        connected_stop = random.choice(all_stops)
-
-        route = generate_random_route()
-
-        if stop not in route.stops:
-            route.stops.append(stop)
-
-        routes.append(route)
+    routes.append(express_1)
 
     return routes

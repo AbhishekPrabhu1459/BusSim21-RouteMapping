@@ -6,17 +6,57 @@ def overlap_penalty(routes):
 
         for j in range(i + 1, len(routes)):
 
-            overlap = set(routes[i].stops).intersection(
-                routes[j].stops
+            route_a = routes[i]
+            route_b = routes[j]
+
+            overlap = set(
+                route_a.stops
+            ).intersection(
+                route_b.stops
             )
 
-            # Small overlap is okay for transfers
-            # Large overlap is bad
+            shared = len(overlap)
 
-            if len(overlap) > 2:
+            # =================================
+            # SMALL OVERLAP GOOD
+            # =================================
 
-                penalty += (
-                    len(overlap) * 100
-                )
+            if shared <= 1:
+                continue
+
+            # =================================
+            # EXPRESS + TRUNK OVERLAP ACCEPTABLE
+            # =================================
+
+            route_types = {
+                route_a.route_type,
+                route_b.route_type
+            }
+
+            if route_types == {
+                "trunk",
+                "express"
+            }:
+
+                penalty += shared * 20
+
+            # =================================
+            # FEEDER + TRUNK OVERLAP GOOD
+            # =================================
+
+            elif route_types == {
+                "feeder",
+                "trunk"
+            }:
+
+                penalty += shared * 10
+
+            # =================================
+            # SAME-TYPE OVERLAP BAD
+            # =================================
+
+            else:
+
+                penalty += shared * 120
 
     return penalty
