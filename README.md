@@ -8,4 +8,4 @@ With a little bit of help from my friend gpt, i was able to build this graph bas
 
 Feel free to alter the data files in your local when running to any maps or maybe even maps of other games if you find it useful.
 
-I will have the source files setup for the map angel shores.
+I will have the source files setup for the map seaside valley.
