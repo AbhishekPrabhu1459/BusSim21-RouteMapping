@@ -22,6 +22,10 @@ def generate_trunk_route():
 
         "Harbour Distribution Centre",
 
+        "Wachowski Industries",
+
+        "University of Technology",
+
         "Harbour Administration"
     ]
 

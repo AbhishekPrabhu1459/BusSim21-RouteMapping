@@ -14,6 +14,8 @@ demand_data = {
 
     ("Harbour", "Harbour"): 450,
 
+    ("Kerststadt", "Kerststadt"): 1200,
+
     # =====================================
     # COMMUTER DEMAND
     # =====================================
@@ -47,4 +49,18 @@ demand_data = {
     ("Siegwalden", "Harbour"): 500,
 
     ("Oakville", "Harbour"): 450,
+
+    # =====================================
+    # UNIVERSITY COMMUTING
+    # =====================================
+
+    ("Astra Park", "Kerststadt"): 1100,
+
+    ("Industrial Zone", "Kerststadt"): 900,
+
+    ("Siegwalden", "Kerststadt"): 700,
+
+    ("Oakville", "Kerststadt"): 650,
+
+    ("Harbour", "Kerststadt"): 500,
 }

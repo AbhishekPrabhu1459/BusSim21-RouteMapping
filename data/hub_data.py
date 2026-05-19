@@ -9,4 +9,6 @@ suburb_hubs = {
     "Industrial Zone": "Harbour Distribution Centre",
 
     "Harbour": "Harbour Administration",
+
+    "Kerststadt": "University of Technology",
 }

@@ -218,4 +218,95 @@ stops = [
         "harbor",
         hub_level=5
     ),
+    # =====================================
+    # KERSTSTADT
+    # =====================================
+
+    BusStop(
+        "University of Technology",
+        "education",
+        "Kerststadt",
+        "university",
+        hub_level=10
+    ),
+
+    BusStop(
+        "Grain Lane",
+        "commercial",
+        "Kerststadt",
+        "university",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Wachowski Industries",
+        "industrial",
+        "Kerststadt",
+        "university",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Tyson Planetarium",
+        "education",
+        "Kerststadt",
+        "university",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Ministry of Science",
+        "government",
+        "Kerststadt",
+        "university",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Arcos Road",
+        "commercial",
+        "Kerststadt",
+        "university",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Kerststadt Church",
+        "commercial",
+        "Kerststadt",
+        "university",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Hill Road",
+        "residential",
+        "Kerststadt",
+        "university",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Fruehauf Academy",
+        "education",
+        "Kerststadt",
+        "university",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Winfield East",
+        "residential",
+        "Kerststadt",
+        "university",
+        hub_level=4
+    ),
+
+    BusStop(
+        "Winfield West",
+        "residential",
+        "Kerststadt",
+        "university",
+        hub_level=4
+    ),
 ]

@@ -292,4 +292,167 @@ roads = [
         0.7,
         "connector"
     ),
+    # =====================================
+    # KERSTSTADT ROADS
+    # =====================================
+
+    Road(
+        "Tyson Planetarium",
+        "Ministry of Science",
+        2,
+        0.4,
+        "urban"
+    ),
+
+    Road(
+        "Ministry of Science",
+        "Grain Lane",
+        2,
+        0.5,
+        "urban"
+    ),
+
+    Road(
+        "Grain Lane",
+        "Wachowski Industries",
+        2,
+        0.5,
+        "urban"
+    ),
+
+    Road(
+        "Wachowski Industries",
+        "Arcos Road",
+        2,
+        0.4,
+        "urban"
+    ),
+
+    Road(
+        "Arcos Road",
+        "Kerststadt Church",
+        2,
+        0.4,
+        "urban"
+    ),
+
+    Road(
+        "Kerststadt Church",
+        "Hill Road",
+        2,
+        0.3,
+        "urban"
+    ),
+
+    Road(
+        "Hill Road",
+        "Fruehauf Academy",
+        2,
+        0.3,
+        "urban"
+    ),
+
+    Road(
+        "Fruehauf Academy",
+        "University of Technology",
+        2,
+        0.5,
+        "urban"
+    ),
+
+    Road(
+        "University of Technology",
+        "Grain Lane",
+        2,
+        0.5,
+        "urban"
+    ),
+
+    Road(
+        "Grain Lane",
+        "Winfield East",
+        2,
+        0.3,
+        "urban"
+    ),
+
+    Road(
+        "Winfield East",
+        "Winfield West",
+        2,
+        0.3,
+        "urban"
+    ),
+
+    # =====================================
+    # BRANCHES
+    # =====================================
+
+    Road(
+        "Grain Lane",
+        "Kerststadt Church",
+        2,
+        0.4,
+        "urban"
+    ),
+
+    Road(
+        "Kerststadt Church",
+        "University of Technology",
+        2,
+        0.4,
+        "urban"
+    ),
+
+    Road(
+        "Grain Lane",
+        "Hill Road",
+        2,
+        0.3,
+        "urban"
+    ),
+
+    Road(
+        "Hill Road",
+        "Tyson Planetarium",
+        2,
+        0.3,
+        "urban"
+    ),
+
+    Road(
+        "Hill Road",
+        "Fruehauf Academy",
+        2,
+        0.3,
+        "urban"
+    ),
+
+    Road(
+        "Fruehauf Academy",
+        "Arcos Road",
+        2,
+        0.3,
+        "urban"
+    ),
+
+    Road(
+        "Wachowski Industries",
+        "Winfield East",
+        2,
+        0.4,
+        "urban"
+    ),
+
+    # =====================================
+    # INDUSTRIAL CONNECTION
+    # =====================================
+
+    Road(
+        "Boos Corp Warehouses",
+        "Wachowski Industries",
+        4,
+        0.6,
+        "connector"
+    ),
 ]
