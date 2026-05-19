@@ -17,4 +17,10 @@ suburb_hubs = {
 
     "Sonnstein":
         "Sonnstein Main Square",
+
+    "Steineck":
+        "Steineck Chapel",
+
+    "Westfield":
+        "Westfield",
 }

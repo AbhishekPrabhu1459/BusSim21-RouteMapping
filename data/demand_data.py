@@ -20,6 +20,10 @@ demand_data = {
 
     ("Sonnstein", "Sonnstein"): 350,
 
+    ("Steineck", "Steineck"): 300,
+
+    ("Westfield", "Westfield"): 500,
+
     # =====================================
     # COMMUTER DEMAND
     # =====================================
@@ -91,4 +95,28 @@ demand_data = {
     ("Sonnstein", "Harbour"): 350,
 
     ("Sonnstein", "Astra Park"): 400,
+
+    # =====================================
+    # STEINECK COMMUTING
+    # =====================================
+
+    ("Steineck", "Sonnstein"): 500,
+
+    ("Steineck", "Agricultural Zone"): 450,
+
+    ("Steineck", "Kerststadt"): 300,
+
+    ("Steineck", "Industrial Zone"): 250,
+
+    # =====================================
+    # WESTFIELD COMMUTING
+    # =====================================
+
+    ("Westfield", "Sonnstein"): 600,
+
+    ("Westfield", "Steineck"): 550,
+
+    ("Westfield", "Kerststadt"): 450,
+
+    ("Westfield", "Industrial Zone"): 300,
 }

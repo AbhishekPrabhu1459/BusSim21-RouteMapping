@@ -613,4 +613,106 @@ roads = [
         0.5,
         "connector"
     ),
+    # =====================================
+    # STEINECK ROADS
+    # =====================================
+
+    Road(
+        "Steinegger Grange",
+        "Steineck Chapel",
+        3,
+        0.3,
+        "regional"
+    ),
+
+    Road(
+        "Steineck Chapel",
+        "Steineck West",
+        2,
+        0.3,
+        "regional"
+    ),
+
+    Road(
+        "Steineck West",
+        "Steineck East",
+        3,
+        0.3,
+        "regional"
+    ),
+
+    # =====================================
+    # SONNSTEIN CONNECTION
+    # =====================================
+
+    Road(
+        "Lower Sonnstein",
+        "Steinegger Grange",
+        5,
+        0.4,
+        "connector"
+    ),
+
+    # =====================================
+    # AGRICULTURAL CONNECTION
+    # =====================================
+
+    Road(
+        "Corn Street Agriculture Centre",
+        "Steineck East",
+        6,
+        0.4,
+        "connector"
+    ),
+    # =====================================
+    # WESTFIELD ROADS
+    # =====================================
+
+    Road(
+        "Gullstrom Grammar School",
+        "Westfield",
+        3,
+        0.3,
+        "suburban"
+    ),
+
+    Road(
+        "Westfield",
+        "Westfield Corn Towers",
+        3,
+        0.3,
+        "suburban"
+    ),
+
+    Road(
+        "Gullstrom Grammar School",
+        "Peacekogel Grange",
+        4,
+        0.2,
+        "suburban"
+    ),
+
+    # =====================================
+    # STEINECK CONNECTION
+    # =====================================
+
+    Road(
+        "Steinegger Grange",
+        "Gullstrom Grammar School",
+        5,
+        0.4,
+        "connector"
+    ),
+
+    # =====================================
+    # SONNSTEIN CONNECTION
+    # =====================================
+
+    Road(
+        "Lower Sonnstein",
+        "Gullstrom Grammar School",
+        5,
+        0.4,
+        "connector"
+    ),
 ]

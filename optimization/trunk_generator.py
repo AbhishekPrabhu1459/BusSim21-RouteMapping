@@ -30,13 +30,19 @@ def generate_trunk_route():
 
         "Lower Sonnstein",
 
+        "Steinegger Grange",
+
+        "Gullstrom Grammar School",
+
+        "Westfield",
+
         "Sonnstein Main Square",
 
-        "Harbour Administration",
+        "Steineck East",
 
-        "Shipwrights Alley",
+        "Corn Street Agriculture Centre",
 
-        "Corn Street Agriculture Centre"
+        "Harbour Administration"
     ]
 
     final_route = []

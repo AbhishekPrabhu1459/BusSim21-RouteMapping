@@ -403,4 +403,74 @@ stops = [
         "regional",
         hub_level=4
     ),
+    # =====================================
+    # STEINECK
+    # =====================================
+
+    BusStop(
+        "Steineck East",
+        "commercial",
+        "Steineck",
+        "suburban",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Steinegger Grange",
+        "residential",
+        "Steineck",
+        "suburban",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Steineck Chapel",
+        "commercial",
+        "Steineck",
+        "suburban",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Steineck West",
+        "residential",
+        "Steineck",
+        "suburban",
+        hub_level=4
+    ),
+    # =====================================
+    # WESTFIELD
+    # =====================================
+
+    BusStop(
+        "Westfield",
+        "commercial",
+        "Westfield",
+        "suburban",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Gullstrom Grammar School",
+        "education",
+        "Westfield",
+        "suburban",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Westfield Corn Towers",
+        "commercial",
+        "Westfield",
+        "suburban",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Peacekogel Grange",
+        "residential",
+        "Westfield",
+        "suburban",
+        hub_level=3
+    ),
 ]
