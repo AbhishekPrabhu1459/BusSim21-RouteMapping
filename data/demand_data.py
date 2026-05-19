@@ -16,6 +16,10 @@ demand_data = {
 
     ("Kerststadt", "Kerststadt"): 1200,
 
+    ("Agricultural Zone", "Agricultural Zone"): 250,
+
+    ("Sonnstein", "Sonnstein"): 350,
+
     # =====================================
     # COMMUTER DEMAND
     # =====================================
@@ -63,4 +67,28 @@ demand_data = {
     ("Oakville", "Kerststadt"): 650,
 
     ("Harbour", "Kerststadt"): 500,
+
+    # =====================================
+    # AGRICULTURAL FLOW
+    # =====================================
+
+    ("Agricultural Zone", "Industrial Zone"): 700,
+
+    ("Agricultural Zone", "Harbour"): 500,
+
+    ("Astra Park", "Agricultural Zone"): 250,
+
+    ("Kerststadt", "Agricultural Zone"): 200,
+
+    # =====================================
+    # SONNSTEIN COMMUTING
+    # =====================================
+
+    ("Sonnstein", "Kerststadt"): 850,
+
+    ("Sonnstein", "Industrial Zone"): 500,
+
+    ("Sonnstein", "Harbour"): 350,
+
+    ("Sonnstein", "Astra Park"): 400,
 }

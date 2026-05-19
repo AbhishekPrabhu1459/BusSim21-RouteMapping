@@ -309,4 +309,98 @@ stops = [
         "university",
         hub_level=4
     ),
+    # =====================================
+    # AGRICULTURAL ZONE
+    # =====================================
+
+    BusStop(
+        "Corn Street Agriculture Centre",
+        "industrial",
+        "Agricultural Zone",
+        "regional",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Nutrivore Research Labs",
+        "education",
+        "Agricultural Zone",
+        "regional",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Sugar Mill",
+        "industrial",
+        "Agricultural Zone",
+        "regional",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Hay Scales",
+        "industrial",
+        "Agricultural Zone",
+        "regional",
+        hub_level=4
+    ),
+    # =====================================
+    # SONNSTEIN
+    # =====================================
+
+    BusStop(
+        "Sonnstein Main Square",
+        "commercial",
+        "Sonnstein",
+        "regional",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Miller Road",
+        "residential",
+        "Sonnstein",
+        "regional",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Sonnleitner Farm",
+        "industrial",
+        "Sonnstein",
+        "regional",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Cellar Road",
+        "commercial",
+        "Sonnstein",
+        "regional",
+        hub_level=4
+    ),
+
+    BusStop(
+        "Soon Mautner Farm",
+        "industrial",
+        "Sonnstein",
+        "regional",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Lower Sonnstein",
+        "residential",
+        "Sonnstein",
+        "regional",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Sun Road",
+        "residential",
+        "Sonnstein",
+        "regional",
+        hub_level=4
+    ),
 ]

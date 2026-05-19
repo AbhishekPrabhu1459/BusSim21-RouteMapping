@@ -11,4 +11,10 @@ suburb_hubs = {
     "Harbour": "Harbour Administration",
 
     "Kerststadt": "University of Technology",
+
+    "Agricultural Zone":
+        "Corn Street Agriculture Centre",
+
+    "Sonnstein":
+        "Sonnstein Main Square",
 }

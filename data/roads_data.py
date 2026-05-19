@@ -455,4 +455,162 @@ roads = [
         0.6,
         "connector"
     ),
+    # =====================================
+    # AGRICULTURAL ZONE ROADS
+    # =====================================
+
+    Road(
+        "Corn Street Agriculture Centre",
+        "Nutrivore Research Labs",
+        3,
+        0.3,
+        "regional"
+    ),
+
+    Road(
+        "Nutrivore Research Labs",
+        "Sugar Mill",
+        3,
+        0.4,
+        "regional"
+    ),
+
+    Road(
+        "Sugar Mill",
+        "Hay Scales",
+        4,
+        0.3,
+        "regional"
+    ),
+
+    # =====================================
+    # BRANCHES
+    # =====================================
+
+    Road(
+        "Corn Street Agriculture Centre",
+        "Hay Scales",
+        5,
+        0.2,
+        "regional"
+    ),
+
+    Road(
+        "Corn Street Agriculture Centre",
+        "Nutrivore Research Labs",
+        3,
+        0.3,
+        "regional"
+    ),
+
+    # =====================================
+    # INDUSTRIAL CONNECTION
+    # =====================================
+
+    Road(
+        "Shipwrights Alley",
+        "Corn Street Agriculture Centre",
+        6,
+        0.5,
+        "connector"
+    ),
+    # =====================================
+    # SONNSTEIN ROADS
+    # =====================================
+
+    Road(
+        "Miller Road",
+        "Sonnleitner Farm",
+        3,
+        0.3,
+        "regional"
+    ),
+
+    Road(
+        "Sonnleitner Farm",
+        "Sonnstein Main Square",
+        3,
+        0.3,
+        "regional"
+    ),
+
+    Road(
+        "Sonnstein Main Square",
+        "Cellar Road",
+        2,
+        0.3,
+        "regional"
+    ),
+
+    Road(
+        "Cellar Road",
+        "Soon Mautner Farm",
+        3,
+        0.3,
+        "regional"
+    ),
+
+    Road(
+        "Soon Mautner Farm",
+        "Lower Sonnstein",
+        3,
+        0.3,
+        "regional"
+    ),
+
+    Road(
+        "Lower Sonnstein",
+        "Sun Road",
+        2,
+        0.2,
+        "regional"
+    ),
+
+    # =====================================
+    # BRANCHES
+    # =====================================
+
+    Road(
+        "Miller Road",
+        "Sun Road",
+        4,
+        0.2,
+        "regional"
+    ),
+
+    Road(
+        "Sonnleitner Farm",
+        "Cellar Road",
+        3,
+        0.2,
+        "regional"
+    ),
+
+    # =====================================
+    # KERSTSTADT CONNECTIONS
+    # =====================================
+
+    Road(
+        "Winfield West",
+        "Lower Sonnstein",
+        5,
+        0.4,
+        "connector"
+    ),
+
+    Road(
+        "Winfield East",
+        "Miller Road",
+        5,
+        0.4,
+        "connector"
+    ),
+
+    Road(
+        "Wachowski Industries",
+        "Miller Road",
+        5,
+        0.5,
+        "connector"
+    ),
 ]
