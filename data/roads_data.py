@@ -221,4 +221,75 @@ roads = [
         0.7,
         "connector"
     ),
+    # =====================================
+    # HARBOUR ROADS
+    # =====================================
+
+    Road(
+        "Harbour Administration",
+        "Ressel Warehouse",
+        2,
+        0.5,
+        "harbor"
+    ),
+
+    Road(
+        "Ressel Warehouse",
+        "Harbor Pier 1",
+        2,
+        0.5,
+        "harbor"
+    ),
+
+    Road(
+        "Harbor Pier 1",
+        "Harbor Pier 3",
+        2,
+        0.6,
+        "harbor"
+    ),
+
+    Road(
+        "Harbor Pier 3",
+        "Oil Harbor North",
+        3,
+        0.6,
+        "harbor"
+    ),
+
+    Road(
+        "Oil Harbor North",
+        "Oil Harbor South",
+        2,
+        0.5,
+        "harbor"
+    ),
+
+    Road(
+        "Oil Harbor South",
+        "Harbour Administration",
+        4,
+        0.5,
+        "harbor"
+    ),
+
+    # =====================================
+    # INDUSTRIAL CONNECTIONS
+    # =====================================
+
+    Road(
+        "Harbour Distribution Centre",
+        "Harbour Administration",
+        4,
+        0.7,
+        "connector"
+    ),
+
+    Road(
+        "Water Treatment Plant",
+        "Harbour Administration",
+        5,
+        0.7,
+        "connector"
+    ),
 ]

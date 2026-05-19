@@ -167,4 +167,55 @@ stops = [
         "industrial",
         hub_level=6
     ),
+    # =====================================
+    # HARBOUR
+    # =====================================
+
+    BusStop(
+        "Harbour Administration",
+        "commercial",
+        "Harbour",
+        "harbor",
+        hub_level=10
+    ),
+
+    BusStop(
+        "Ressel Warehouse",
+        "industrial",
+        "Harbour",
+        "harbor",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Harbor Pier 1",
+        "industrial",
+        "Harbour",
+        "harbor",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Harbor Pier 3",
+        "industrial",
+        "Harbour",
+        "harbor",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Oil Harbor North",
+        "industrial",
+        "Harbour",
+        "harbor",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Oil Harbor South",
+        "industrial",
+        "Harbour",
+        "harbor",
+        hub_level=5
+    ),
 ]

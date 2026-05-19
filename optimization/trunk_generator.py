@@ -3,43 +3,40 @@ import networkx as nx
 from simulation.city_graph import city_graph
 from simulation.routes import Route
 
-from data.hub_data import suburb_hubs
-
 
 def generate_trunk_route():
 
     major_corridor = [
 
-        "Westfield Central",
+        "Oakville Central",
 
-        "Old Town Central",
+        "Siegwalden Secondary School",
 
-        "Industrial Hub",
+        "Siegwalden",
 
-        "Airport Terminal"
+        "Siegwalden Lido",
+
+        "Media Centre Astra",
+
+        "Boos Corp Warehouses",
+
+        "Harbour Distribution Centre",
+
+        "Harbour Administration"
     ]
-
-    valid_stops = []
-
-    for stop in major_corridor:
-
-        if stop in city_graph.nodes:
-
-            valid_stops.append(stop)
 
     final_route = []
 
-    for i in range(len(valid_stops) - 1):
+    for i in range(len(major_corridor) - 1):
 
         try:
 
             segment = nx.shortest_path(
                 city_graph,
-                valid_stops[i],
-                valid_stops[i + 1]
+                major_corridor[i],
+                major_corridor[i + 1]
             )
 
-            # Prevent duplicate joins
             if final_route:
 
                 segment = segment[1:]

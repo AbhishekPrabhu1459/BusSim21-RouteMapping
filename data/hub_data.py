@@ -7,4 +7,6 @@ suburb_hubs = {
     "Oakville": "Oakville Central",
 
     "Industrial Zone": "Harbour Distribution Centre",
+
+    "Harbour": "Harbour Administration",
 }
