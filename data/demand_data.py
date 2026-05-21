@@ -24,6 +24,8 @@ demand_data = {
 
     ("Westfield", "Westfield"): 500,
 
+    ("Schobergrounds", "Schobergrounds"): 700,
+
     # =====================================
     # COMMUTER DEMAND
     # =====================================
@@ -119,4 +121,34 @@ demand_data = {
     ("Westfield", "Kerststadt"): 450,
 
     ("Westfield", "Industrial Zone"): 300,
+
+    # =====================================
+    # SCHOBERGROUNDS COMMUTING
+    # =====================================
+
+    ("Schobergrounds", "Industrial Zone"): 900,
+
+    ("Schobergrounds", "Agricultural Zone"): 700,
+
+    ("Schobergrounds", "Siegwalden"): 650,
+
+    ("Schobergrounds", "Harbour"): 500,
+
+    ("Schobergrounds", "Kerststadt"): 450,
+
+    # =====================================
+    # SCHARFETTERFIELD COMMUTING
+    # =====================================
+
+    ("Scharfetterfield", "Industrial Zone"): 1200,
+
+    ("Scharfetterfield", "Harbour"): 1000,
+
+    ("Scharfetterfield", "Kerststadt"): 1300,
+
+    ("Scharfetterfield", "Astra Park"): 900,
+
+    ("Scharfetterfield", "Westfield"): 700,
+
+    ("Scharfetterfield", "Schobergrounds"): 1100,
 }

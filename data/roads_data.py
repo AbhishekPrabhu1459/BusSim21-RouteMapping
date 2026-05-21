@@ -715,4 +715,198 @@ roads = [
         0.4,
         "connector"
     ),
+    # =====================================
+    # SCHOBERGROUNDS ROADS
+    # =====================================
+
+    Road(
+        "Fishers Ground",
+        "Railbuilders Ridge",
+        2,
+        0.5,
+        "urban"
+    ),
+
+    Road(
+        "Railbuilders Ridge",
+        "Workers Alley",
+        2,
+        0.5,
+        "urban"
+    ),
+
+    Road(
+        "Workers Alley",
+        "River Promenade",
+        3,
+        0.4,
+        "urban"
+    ),
+
+    # =====================================
+    # INDUSTRIAL CONNECTION
+    # =====================================
+
+    Road(
+        "Shipwrights Alley",
+        "Fishers Ground",
+        4,
+        0.6,
+        "connector"
+    ),
+
+    # =====================================
+    # AGRICULTURAL CONNECTION
+    # =====================================
+
+    Road(
+        "Corn Street Agriculture Centre",
+        "Fishers Ground",
+        5,
+        0.5,
+        "connector"
+    ),
+
+    # =====================================
+    # SIEGWALDEN CONNECTIONS
+    # =====================================
+
+    Road(
+        "Siegwalden",
+        "Fishers Ground",
+        5,
+        0.5,
+        "connector"
+    ),
+
+    Road(
+        "Siegwalden Lido",
+        "Fishers Ground",
+        5,
+        0.5,
+        "connector"
+    ),
+    # =====================================
+    # SCHARFETTERFIELD ROADS
+    # =====================================
+
+    Road(
+        "High Road",
+        "Grois Alley",
+        2,
+        0.6,
+        "urban"
+    ),
+
+    Road(
+        "Grois Alley",
+        "Amber Gate",
+        2,
+        0.7,
+        "urban"
+    ),
+
+    Road(
+        "Amber Gate",
+        "Main Station",
+        2,
+        0.8,
+        "urban"
+    ),
+
+    Road(
+        "Main Station",
+        "Carpenters Gate",
+        2,
+        0.8,
+        "urban"
+    ),
+
+    Road(
+        "Carpenters Gate",
+        "Julius Matschner Street",
+        2,
+        0.7,
+        "urban"
+    ),
+
+    Road(
+        "Julius Matschner Street",
+        "Whisper Way",
+        3,
+        0.5,
+        "urban"
+    ),
+
+    Road(
+        "Whisper Way",
+        "Lindner Alley",
+        2,
+        0.4,
+        "urban"
+    ),
+
+    # =====================================
+    # LOOP CONNECTIONS
+    # =====================================
+
+    Road(
+        "Grois Alley",
+        "Main Station",
+        2,
+        0.7,
+        "urban"
+    ),
+
+    Road(
+        "Amber Gate",
+        "Julius Matschner Street",
+        2,
+        0.7,
+        "urban"
+    ),
+
+    Road(
+        "Main Station",
+        "Whisper Way",
+        3,
+        0.6,
+        "urban"
+    ),
+
+    # =====================================
+    # EXTERNAL CONNECTIONS
+    # =====================================
+
+    Road(
+        "Railbuilders Ridge",
+        "Carpenters Gate",
+        4,
+        0.7,
+        "connector"
+    ),
+
+    Road(
+        "Workers Alley",
+        "Main Station",
+        4,
+        0.8,
+        "connector"
+    ),
+
+    Road(
+        "Westfield Corn Towers",
+        "High Road",
+        5,
+        0.5,
+        "connector"
+    ),
+
+    Road(
+        "Steinegger Grange",
+        "High Road",
+        5,
+        0.5,
+        "connector"
+    ),
 ]

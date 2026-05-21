@@ -14,7 +14,7 @@ def generate_trunk_route():
 
         "Siegwalden",
 
-        "Siegwalden Lido",
+        "Fishers Ground",
 
         "Media Centre Astra",
 

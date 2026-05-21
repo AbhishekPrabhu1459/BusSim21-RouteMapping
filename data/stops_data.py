@@ -473,4 +473,106 @@ stops = [
         "suburban",
         hub_level=3
     ),
+    # =====================================
+    # SCHOBERGROUNDS
+    # =====================================
+
+    BusStop(
+        "Fishers Ground",
+        "commercial",
+        "Schobergrounds",
+        "urban_connector",
+        hub_level=10
+    ),
+
+    BusStop(
+        "Railbuilders Ridge",
+        "industrial",
+        "Schobergrounds",
+        "urban_connector",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Workers Alley",
+        "industrial",
+        "Schobergrounds",
+        "urban_connector",
+        hub_level=6
+    ),
+
+    BusStop(
+        "River Promenade",
+        "commercial",
+        "Schobergrounds",
+        "urban_connector",
+        hub_level=5
+    ),
+    # =====================================
+    # SCHARFETTERFIELD
+    # =====================================
+
+    BusStop(
+        "Main Station",
+        "transport",
+        "Scharfetterfield",
+        "urban_core",
+        hub_level=10
+    ),
+
+    BusStop(
+        "High Road",
+        "commercial",
+        "Scharfetterfield",
+        "urban_core",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Grois Alley",
+        "commercial",
+        "Scharfetterfield",
+        "urban_core",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Amber Gate",
+        "commercial",
+        "Scharfetterfield",
+        "urban_core",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Carpenters Gate",
+        "commercial",
+        "Scharfetterfield",
+        "urban_core",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Julius Matschner Street",
+        "commercial",
+        "Scharfetterfield",
+        "urban_core",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Whisper Way",
+        "residential",
+        "Scharfetterfield",
+        "urban_core",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Lindner Alley",
+        "residential",
+        "Scharfetterfield",
+        "urban_core",
+        hub_level=5
+    ),
 ]

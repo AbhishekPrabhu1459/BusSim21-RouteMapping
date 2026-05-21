@@ -19,8 +19,14 @@ suburb_hubs = {
         "Sonnstein Main Square",
 
     "Steineck":
-        "Steineck Chapel",
+        "Steineck East",
 
     "Westfield":
         "Westfield",
+
+    "Schobergrounds":
+        "Fishers Ground",
+
+    "Scharfetterfield":
+        "Main Station",
 }
