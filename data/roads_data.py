@@ -909,4 +909,318 @@ roads = [
         0.5,
         "connector"
     ),
+    # =====================================
+    # MAYERHEIM ROADS
+    # =====================================
+
+    Road(
+        "Central Hub Station",
+        "Roman Road",
+        2,
+        0.9,
+        "urban_core"
+    ),
+
+    Road(
+        "Roman Road",
+        "Rose Street",
+        2,
+        0.8,
+        "urban_core"
+    ),
+
+    Road(
+        "Rose Street",
+        "Free Field Settlement",
+        2,
+        0.6,
+        "urban_core"
+    ),
+
+    Road(
+        "Free Field Settlement",
+        "Dr Doil Street",
+        2,
+        0.7,
+        "urban_core"
+    ),
+
+    Road(
+        "Dr Doil Street",
+        "City Hall",
+        2,
+        1.0,
+        "urban_core"
+    ),
+
+    Road(
+        "City Hall",
+        "Mayerheim School",
+        2,
+        0.7,
+        "urban_core"
+    ),
+
+    Road(
+        "Mayerheim School",
+        "Pelter Street",
+        2,
+        0.6,
+        "urban_core"
+    ),
+
+    Road(
+        "Pelter Street",
+        "Sunglare Valley",
+        3,
+        0.5,
+        "urban_core"
+    ),
+
+    # =====================================
+    # INNER URBAN LINKS
+    # =====================================
+
+    Road(
+        "Rose Street",
+        "Dr Doil Street",
+        2,
+        0.8,
+        "urban_core"
+    ),
+
+    Road(
+        "Roman Road",
+        "Free Field Settlement",
+        2,
+        0.6,
+        "urban_core"
+    ),
+
+    Road(
+        "Dr Doil Street",
+        "Pelter Street",
+        2,
+        0.7,
+        "urban_core"
+    ),
+
+    Road(
+        "City Hall",
+        "Central Hub Station",
+        2,
+        1.0,
+        "urban_core"
+    ),
+
+    # =====================================
+    # WESTFIELD CONNECTIONS
+    # =====================================
+
+    Road(
+        "Westfield Corn Towers",
+        "Sunglare Valley",
+        5,
+        0.5,
+        "connector"
+    ),
+
+    Road(
+        "Peacekogel Grange",
+        "Roman Road",
+        5,
+        0.5,
+        "connector"
+    ),
+
+    # =====================================
+    # SCHARFETTERFIELD CONNECTIONS
+    # =====================================
+
+    Road(
+        "High Road",
+        "Sunglare Valley",
+        4,
+        0.7,
+        "connector"
+    ),
+
+    Road(
+        "Amber Gate",
+        "City Hall",
+        4,
+        0.8,
+        "connector"
+    ),
+    # =====================================
+    # OLDTOWN CBD ROADS
+    # =====================================
+
+    Road("Victory Road", "Trading Centre 1", 2, 1.0, "CBD"),
+
+    Road("Trading Centre 1", "Giants Alley", 2, 0.9, "CBD"),
+
+    Road("Giants Alley", "Cathedral City Center 1", 2, 1.0, "CBD"),
+
+    Road("Cathedral City Center 1", "Cathedral City Center 2", 1, 1.0, "CBD"),
+
+    Road("Cathedral City Center 2", "Wilten Theatre", 2, 0.9, "CBD"),
+
+    Road("Wilten Theatre", "Old Brewery 2", 2, 0.8, "CBD"),
+
+    Road("Old Brewery 2", "Horsemill Alley", 2, 0.8, "CBD"),
+
+    Road("Horsemill Alley", "Punic Alley", 2, 0.7, "CBD"),
+
+    Road("Punic Alley", "Townhall Park 2", 2, 0.8, "CBD"),
+
+    Road("Townhall Park 2", "Townhall Alley", 2, 0.9, "CBD"),
+
+    Road("Townhall Alley", "Town Hall Park 1", 1, 1.0, "CBD"),
+
+    Road("Town Hall Park 1", "Trading Centre 2", 2, 1.0, "CBD"),
+
+    Road("Trading Centre 2", "Ropewinders Road", 2, 0.9, "CBD"),
+
+    Road("Ropewinders Road", "St Polus Inn 2", 2, 0.8, "CBD"),
+
+    Road("St Polus Inn 2", "Old Brewery 1", 2, 0.8, "CBD"),
+
+    Road("Old Brewery 1", "Ploger Park 2", 2, 0.7, "CBD"),
+
+    Road("Ploger Park 2", "Ploger Park 1", 2, 0.7, "CBD"),
+
+    Road("Ploger Park 1", "St Polus Inn 1", 2, 0.8, "CBD"),
+
+    Road("St Polus Inn 1", "Radovanovic Bridge", 2, 1.0, "CBD"),
+
+    # =====================================
+    # INNER CBD LINKS
+    # =====================================
+
+    Road("Trading Centre 1", "Trading Centre 2", 2, 1.0, "CBD"),
+
+    Road("Cathedral City Center 1", "Town Hall Park 1", 2, 1.0, "CBD"),
+
+    Road("Cathedral City Center 2", "Old Brewery 1", 2, 0.9, "CBD"),
+
+    Road("Wilten Theatre", "Townhall Alley", 2, 0.9, "CBD"),
+
+    Road("Ropewinders Road", "Cathedral City Center 2", 2, 0.9, "CBD"),
+
+    # =====================================
+    # OAKVILLE CONNECTIONS
+    # =====================================
+
+    Road(
+        "Old Sawmill",
+        "Radovanovic Bridge",
+        6,
+        0.7,
+        "connector"
+    ),
+
+    Road(
+        "Old Sawmill",
+        "St Polus Inn 1",
+        6,
+        0.7,
+        "connector"
+    ),
+
+    # =====================================
+    # SIEGWALDEN CONNECTIONS
+    # =====================================
+
+    Road(
+        "Siegwalden",
+        "Radovanovic Bridge",
+        6,
+        0.7,
+        "connector"
+    ),
+
+    Road(
+        "Siegwalden",
+        "St Polus Inn 1",
+        6,
+        0.7,
+        "connector"
+    ),
+
+    # =====================================
+    # SCHARFETTERFIELD CONNECTIONS
+    # =====================================
+
+    Road(
+        "Carpenters Gate",
+        "Horsemill Alley",
+        4,
+        0.9,
+        "connector"
+    ),
+
+    Road(
+        "Main Station",
+        "Wilten Theatre",
+        4,
+        1.0,
+        "connector"
+    ),
+
+    Road(
+        "Main Station",
+        "Old Brewery 2",
+        4,
+        0.9,
+        "connector"
+    ),
+
+    # =====================================
+    # MAYERHEIM CONNECTIONS
+    # =====================================
+
+    Road(
+        "Central Hub Station",
+        "Victory Road",
+        4,
+        1.0,
+        "connector"
+    ),
+
+    Road(
+        "Central Hub Station",
+        "Trading Centre 1",
+        4,
+        1.0,
+        "connector"
+    ),
+
+    Road(
+        "Central Hub Station",
+        "Town Hall Park 1",
+        4,
+        1.0,
+        "connector"
+    ),
+
+    # =====================================
+    # SCHOBERGROUNDS CONNECTIONS
+    # =====================================
+
+    Road(
+        "River Promenade",
+        "Radovanovic Bridge",
+        5,
+        0.8,
+        "connector"
+    ),
+
+    Road(
+        "River Promenade",
+        "Ropewinders Road",
+        5,
+        0.8,
+        "connector"
+    ),
 ]

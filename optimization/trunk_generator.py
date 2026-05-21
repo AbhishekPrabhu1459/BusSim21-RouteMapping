@@ -4,69 +4,48 @@ from simulation.city_graph import city_graph
 from simulation.routes import Route
 
 
-def generate_trunk_route():
+major_hubs = [
 
-    major_corridor = [
+    "Cathedral City Center 1",
 
-        "Oakville Central",
+    "Central Hub Station",
 
-        "Siegwalden Secondary School",
+    "Main Station",
 
-        "Siegwalden",
+    "Fishers Ground",
 
-        "Fishers Ground",
+    "University of Technology",
 
-        "Media Centre Astra",
+    "Harbour Distribution Centre",
 
-        "Boos Corp Warehouses",
+    "Harbour Administration"
+]
 
-        "Harbour Distribution Centre",
 
-        "Wachowski Industries",
+def generate_trunk_routes():
 
-        "University of Technology",
+    routes = []
 
-        "Winfield West",
+    for i in range(len(major_hubs)):
 
-        "Lower Sonnstein",
+        for j in range(i + 1, len(major_hubs)):
 
-        "Steinegger Grange",
+            try:
 
-        "Gullstrom Grammar School",
+                path = nx.shortest_path(
+                    city_graph,
+                    major_hubs[i],
+                    major_hubs[j]
+                )
 
-        "Westfield",
+                if len(path) < 4:
+                    continue
 
-        "Sonnstein Main Square",
+                routes.append(
+                    Route(path, "trunk")
+                )
 
-        "Steineck East",
+            except:
+                pass
 
-        "Corn Street Agriculture Centre",
-
-        "Harbour Administration"
-    ]
-
-    final_route = []
-
-    for i in range(len(major_corridor) - 1):
-
-        try:
-
-            segment = nx.shortest_path(
-                city_graph,
-                major_corridor[i],
-                major_corridor[i + 1]
-            )
-
-            if final_route:
-
-                segment = segment[1:]
-
-            final_route.extend(segment)
-
-        except:
-            pass
-
-    return Route(
-        final_route,
-        "trunk"
-    )
+    return routes

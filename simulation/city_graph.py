@@ -7,23 +7,41 @@ from data.roads_data import roads
 city_graph = nx.Graph()
 
 
+# =====================================
+# ADD STOPS
+# =====================================
+
 for stop in stops:
 
     city_graph.add_node(
+
         stop.name,
-        zone_type=stop.zone_type,
-        suburb=stop.suburb,
+
+        stop_type=stop.stop_type,
+
+        district=stop.district,
+
         district_type=stop.district_type,
+
         hub_level=stop.hub_level
     )
 
 
+# =====================================
+# ADD ROADS
+# =====================================
+
 for road in roads:
 
     city_graph.add_edge(
-        road.from_stop,
-        road.to_stop,
-        travel_time=road.travel_time,
-        traffic=road.traffic_level,
+
+        road.start,
+
+        road.end,
+
+        distance=road.distance,
+
+        traffic=road.traffic,
+
         road_type=road.road_type
     )

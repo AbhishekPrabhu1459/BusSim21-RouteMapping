@@ -151,4 +151,42 @@ demand_data = {
     ("Scharfetterfield", "Westfield"): 700,
 
     ("Scharfetterfield", "Schobergrounds"): 1100,
+
+    # =====================================
+    # MAYERHEIM COMMUTING
+    # =====================================
+
+    ("Mayerheim", "Industrial Zone"): 1800,
+
+    ("Mayerheim", "Harbour"): 1600,
+
+    ("Mayerheim", "Kerststadt"): 1700,
+
+    ("Mayerheim", "Scharfetterfield"): 2000,
+
+    ("Mayerheim", "Astra Park"): 1200,
+
+    ("Mayerheim", "Westfield"): 900,
+
+    ("Mayerheim", "Schobergrounds"): 1400,
+
+    # =====================================
+    # OLDTOWN CBD COMMUTING
+    # =====================================
+
+    ("OldTown", "Mayerheim"): 3000,
+
+    ("OldTown", "Scharfetterfield"): 2800,
+
+    ("OldTown", "Industrial Zone"): 2400,
+
+    ("OldTown", "Harbour"): 2200,
+
+    ("OldTown", "Kerststadt"): 2600,
+
+    ("OldTown", "Schobergrounds"): 2100,
+
+    ("OldTown", "Westfield"): 1200,
+
+    ("OldTown", "Siegwalden"): 1400,
 }

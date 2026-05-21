@@ -1,36 +1,49 @@
+import networkx as nx
+
+from simulation.city_graph import city_graph
 from simulation.routes import Route
 
-from data.hub_data import suburb_hubs
+
+express_hubs = [
+
+    "Cathedral City Center 1",
+
+    "Central Hub Station",
+
+    "University of Technology",
+
+    "Harbour Distribution Centre",
+
+    "Media Centre Astra"
+]
 
 
-def generate_express_route():
+def generate_express_routes():
 
-    hubs = list(suburb_hubs.values())
+    routes = []
 
-    # Select only highest-priority hubs
-    express_stops = []
+    for i in range(len(express_hubs)):
 
-    if "Old Town Central" in hubs:
-        express_stops.append(
-            "Old Town Central"
-        )
+        for j in range(i + 1, len(express_hubs)):
 
-    if "Airport Terminal" in hubs:
-        express_stops.append(
-            "Airport Terminal"
-        )
+            try:
 
-    # Add industrial only if needed
-    if (
-        "Industrial Hub" in hubs
-        and len(express_stops) < 3
-    ):
+                path = nx.shortest_path(
+                    city_graph,
+                    express_hubs[i],
+                    express_hubs[j]
+                )
 
-        express_stops.append(
-            "Industrial Hub"
-        )
+                filtered = path[::2]
 
-    return Route(
-        express_stops,
-        "express"
-    )
+                if path[-1] not in filtered:
+                    filtered.append(path[-1])
+
+                routes.append(
+                    Route(filtered, "express")
+                )
+
+            except:
+                pass
+
+    return routes

@@ -29,4 +29,10 @@ suburb_hubs = {
 
     "Scharfetterfield":
         "Main Station",
+
+    "Mayerheim":
+        "Central Hub Station",
+
+    "OldTown":
+        "Cathedral City Center 1",
 }

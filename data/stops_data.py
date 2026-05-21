@@ -575,4 +575,242 @@ stops = [
         "urban_core",
         hub_level=5
     ),
+    # =====================================
+    # MAYERHEIM
+    # =====================================
+
+    BusStop(
+        "Central Hub Station",
+        "transport",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=12
+    ),
+
+    BusStop(
+        "Roman Road",
+        "commercial",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Rose Street",
+        "commercial",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Free Field Settlement",
+        "residential",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Dr Doil Street",
+        "commercial",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=8
+    ),
+
+    BusStop(
+        "City Hall",
+        "government",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=10
+    ),
+
+    BusStop(
+        "Mayerheim School",
+        "education",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Pelter Street",
+        "commercial",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=5
+    ),
+
+    BusStop(
+        "Sunglare Valley",
+        "residential",
+        "Mayerheim",
+        "metropolitan_core",
+        hub_level=6
+    ),
+    # =====================================
+    # OLDTOWN (CBD)
+    # =====================================
+
+    BusStop(
+        "Victory Road",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=10
+    ),
+
+    BusStop(
+        "Radovanovic Bridge",
+        "transport",
+        "OldTown",
+        "CBD",
+        hub_level=11
+    ),
+
+    BusStop(
+        "Trading Centre 1",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=9
+    ),
+
+    BusStop(
+        "Giants Alley",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=7
+    ),
+
+    BusStop(
+        "St Polus Inn 1",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Ropewinders Road",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Trading Centre 2",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=9
+    ),
+
+    BusStop(
+        "Ploger Park 1",
+        "recreation",
+        "OldTown",
+        "CBD",
+        hub_level=6
+    ),
+
+    BusStop(
+        "St Polus Inn 2",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Town Hall Park 1",
+        "government",
+        "OldTown",
+        "CBD",
+        hub_level=9
+    ),
+
+    BusStop(
+        "Townhall Alley",
+        "government",
+        "OldTown",
+        "CBD",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Ploger Park 2",
+        "recreation",
+        "OldTown",
+        "CBD",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Cathedral City Center 1",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=12
+    ),
+
+    BusStop(
+        "Cathedral City Center 2",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=12
+    ),
+
+    BusStop(
+        "Old Brewery 1",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Wilten Theatre",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=9
+    ),
+
+    BusStop(
+        "Old Brewery 2",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=7
+    ),
+
+    BusStop(
+        "Horsemill Alley",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=8
+    ),
+
+    BusStop(
+        "Punic Alley",
+        "commercial",
+        "OldTown",
+        "CBD",
+        hub_level=6
+    ),
+
+    BusStop(
+        "Townhall Park 2",
+        "government",
+        "OldTown",
+        "CBD",
+        hub_level=8
+    ),
 ]
