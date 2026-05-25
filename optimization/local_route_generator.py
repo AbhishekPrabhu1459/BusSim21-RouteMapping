@@ -1,6 +1,7 @@
 from simulation.routes import Route
 
 from data.stops_data import stops
+from data.hub_data import suburb_hubs
 
 
 district_stop_map = {}
@@ -20,35 +21,71 @@ def generate_local_routes():
 
     for district, stop_list in district_stop_map.items():
 
-        if len(stop_list) < 4:
+        if len(stop_list) < 6:
             continue
 
+        hub = suburb_hubs[district]["hub"]
+
         # =====================================
-        # SPLIT INTO 2 LOCAL LOOPS
+        # ENSURE HUB IS CENTRAL
         # =====================================
 
-        midpoint = len(stop_list) // 2
+        ordered = []
 
-        route1 = stop_list[:midpoint + 1]
+        if hub in stop_list:
 
-        route2 = stop_list[midpoint:]
+            ordered.append(hub)
 
-        if len(route1) >= 4:
+        for stop in stop_list:
+
+            if stop != hub:
+
+                ordered.append(stop)
+
+        # =====================================
+        # SINGLE LARGE LOCAL LOOP
+        # =====================================
+
+        if len(ordered) >= 10:
 
             routes.append(
                 Route(
-                    route1,
+                    ordered,
                     "local"
                 )
             )
 
-        if len(route2) >= 4:
+        else:
 
-            routes.append(
-                Route(
-                    route2,
-                    "local"
-                )
+            # =====================================
+            # SMALL DISTRICTS
+            # =====================================
+
+            midpoint = len(ordered) // 2
+
+            route1 = ordered[:midpoint + 1]
+
+            route2 = (
+                [hub]
+                + ordered[midpoint:]
             )
+
+            if len(route1) >= 6:
+
+                routes.append(
+                    Route(
+                        route1,
+                        "local"
+                    )
+                )
+
+            if len(route2) >= 6:
+
+                routes.append(
+                    Route(
+                        route2,
+                        "local"
+                    )
+                )
 
     return routes

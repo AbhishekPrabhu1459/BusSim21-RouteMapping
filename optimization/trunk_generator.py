@@ -78,4 +78,77 @@ def generate_trunk_routes():
         )
     )
 
+    # =====================================
+    # REGIONAL ORBITAL
+    # =====================================
+
+    routes.append(
+
+        Route(
+
+            [
+
+                "Westfield",
+
+                "Lower Sonnstein",
+
+                "University of Technology",
+
+                "Harbour Distribution Centre",
+
+                "Fishers Ground",
+
+                "Main Station"
+            ],
+
+            "trunk"
+        )
+    )
+    # =====================================
+    # INNER CITY EAST/WEST
+    # =====================================
+
+    routes.append(
+
+        Route(
+
+            [
+
+                "Cathedral City Center 1",
+
+                "Town Hall Park 1",
+
+                "Central Hub Station",
+
+                "Main Station"
+            ],
+
+            "trunk"
+        )
+    )
+
+    # =====================================
+    # INNER CITY NORTH/SOUTH
+    # =====================================
+
+    routes.append(
+
+        Route(
+
+            [
+
+                "Main Station",
+
+                "Amber Gate",
+
+                "City Hall",
+
+                "Central Hub Station"
+            ],
+
+            "trunk"
+        )
+    )
+    
+
     return routes

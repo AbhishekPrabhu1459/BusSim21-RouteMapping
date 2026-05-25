@@ -18,6 +18,10 @@ from optimization.route_cleaner import (
     clean_routes
 )
 
+from optimization.orbital_generator import (
+    generate_orbital_routes
+)
+
 
 def optimize_network():
 
@@ -37,6 +41,10 @@ def optimize_network():
 
     routes.extend(
         generate_express_routes()
+    )
+
+    routes.extend(
+    generate_orbital_routes()
     )
 
     routes = clean_routes(routes)

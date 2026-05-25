@@ -10,6 +10,10 @@ from optimization.network_scorer import (
     score_network
 )
 
+from optimization.travel_time_calculator import (
+    calculate_route_time
+)
+
 
 # =====================================
 # GENERATE NETWORK
@@ -25,6 +29,8 @@ routes = optimize_network()
 for route in routes:
 
     assign_frequency(route)
+
+    calculate_route_time(route)
 
 
 # =====================================

@@ -20,12 +20,19 @@ class Route:
 
         self.unique_stops = len(set(stops))
 
+        # =====================================
+        # NEW
+        # =====================================
+
+        self.travel_time = 0
+
     def __repr__(self):
 
         return (
             f"\nRoute(\n"
             f"  type={self.route_type},\n"
             f"  stops={self.stop_count},\n"
-            f"  frequency={self.frequency}\n"
+            f"  frequency={self.frequency},\n"
+            f"  travel_time={self.travel_time}\n"
             f")"
         )

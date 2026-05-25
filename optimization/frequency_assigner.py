@@ -16,15 +16,39 @@ def assign_frequency(route):
 
     average = total / len(route.stops)
 
-    if average >= 12:
+    # =====================================
+    # ROUTE TYPE MODIFIERS
+    # =====================================
 
-        route.frequency = 4
+    if route.route_type == "express":
 
-    elif average >= 8:
+        average += 6
 
-        route.frequency = 6
+    elif route.route_type == "trunk":
 
-    elif average >= 5:
+        average += 4
+
+    elif route.route_type == "orbital":
+
+        average += 2
+
+    # =====================================
+    # ASSIGN FREQUENCY
+    # =====================================
+
+    if average >= 15:
+
+        route.frequency = 3
+
+    elif average >= 12:
+
+        route.frequency = 5
+
+    elif average >= 9:
+
+        route.frequency = 7
+
+    elif average >= 6:
 
         route.frequency = 10
 
