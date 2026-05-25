@@ -1,22 +1,10 @@
-import random
-import networkx as nx
-
-from simulation.city_graph import city_graph
 from simulation.routes import Route
 
 from data.stops_data import stops
-from data.hub_data import suburb_hubs
-from data.district_connections import (
-    district_connections
-)
-from data.district_data import districts
 
-
-# =====================================
-# GET STOPS BY DISTRICT
-# =====================================
 
 district_stop_map = {}
+
 
 for stop in stops:
 
@@ -26,101 +14,39 @@ for stop in stops:
     ).append(stop.name)
 
 
-# =====================================
-# GENERATE LONG LOCAL ROUTES
-# =====================================
-
 def generate_local_routes():
 
     routes = []
 
-    for district, info in districts.items():
+    for district, stop_list in district_stop_map.items():
 
-        target_size = info["target_stops"]
-
-        neighbors = district_connections.get(
-            district,
-            []
-        )
-
-        if district not in district_stop_map:
+        if len(stop_list) < 4:
             continue
 
-        local_stops = list(
-            district_stop_map[district]
-        )
-
-        route_stops = []
-
-        visited_districts = set()
-
-        current_district = district
-
-        while len(route_stops) < target_size:
-
-            if current_district in visited_districts:
-                break
-
-            visited_districts.add(
-                current_district
-            )
-
-            current_stops = district_stop_map.get(
-                current_district,
-                []
-            )
-
-            for stop in current_stops:
-
-                if stop not in route_stops:
-
-                    route_stops.append(stop)
-
-            possible = district_connections.get(
-                current_district,
-                []
-            )
-
-            if not possible:
-                break
-
-            current_district = random.choice(
-                possible
-            )
-
         # =====================================
-        # BUILD CONTINUOUS PATH
+        # SPLIT INTO 2 LOCAL LOOPS
         # =====================================
 
-        final_path = []
+        midpoint = len(stop_list) // 2
 
-        for i in range(len(route_stops) - 1):
+        route1 = stop_list[:midpoint + 1]
 
-            try:
+        route2 = stop_list[midpoint:]
 
-                segment = nx.shortest_path(
-                    city_graph,
-                    route_stops[i],
-                    route_stops[i + 1]
-                )
-
-                if final_path:
-                    segment = segment[1:]
-
-                final_path.extend(segment)
-
-            except:
-                pass
-
-        # =====================================
-        # ENSURE GOOD ROUTE SIZE
-        # =====================================
-
-        if len(final_path) >= 15:
+        if len(route1) >= 4:
 
             routes.append(
                 Route(
-                    final_path,
+                    route1,
+                    "local"
+                )
+            )
+
+        if len(route2) >= 4:
+
+            routes.append(
+                Route(
+                    route2,
                     "local"
                 )
             )

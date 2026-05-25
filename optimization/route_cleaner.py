@@ -1,6 +1,7 @@
 def overlap_ratio(route1, route2):
 
     set1 = set(route1.stops)
+
     set2 = set(route2.stops)
 
     overlap = len(set1 & set2)

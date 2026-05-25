@@ -1,51 +1,81 @@
-import networkx as nx
-
-from simulation.city_graph import city_graph
 from simulation.routes import Route
-
-
-major_hubs = [
-
-    "Cathedral City Center 1",
-
-    "Central Hub Station",
-
-    "Main Station",
-
-    "Fishers Ground",
-
-    "University of Technology",
-
-    "Harbour Distribution Centre",
-
-    "Harbour Administration"
-]
 
 
 def generate_trunk_routes():
 
     routes = []
 
-    for i in range(len(major_hubs)):
+    # =====================================
+    # METRO CORE EAST/WEST
+    # =====================================
 
-        for j in range(i + 1, len(major_hubs)):
+    routes.append(
 
-            try:
+        Route(
 
-                path = nx.shortest_path(
-                    city_graph,
-                    major_hubs[i],
-                    major_hubs[j]
-                )
+            [
 
-                if len(path) < 4:
-                    continue
+                "Cathedral City Center 1",
 
-                routes.append(
-                    Route(path, "trunk")
-                )
+                "Wilten Theatre",
 
-            except:
-                pass
+                "Main Station",
+
+                "Central Hub Station"
+            ],
+
+            "trunk"
+        )
+    )
+
+    # =====================================
+    # UNIVERSITY CORRIDOR
+    # =====================================
+
+    routes.append(
+
+        Route(
+
+            [
+
+                "Central Hub Station",
+
+                "Sunglare Valley",
+
+                "Westfield",
+
+                "Lower Sonnstein",
+
+                "University of Technology"
+            ],
+
+            "trunk"
+        )
+    )
+
+    # =====================================
+    # INDUSTRIAL CORRIDOR
+    # =====================================
+
+    routes.append(
+
+        Route(
+
+            [
+
+                "Main Station",
+
+                "Fishers Ground",
+
+                "Boos Corp Warehouses",
+
+                "Harbour Distribution Centre",
+
+                "Harbour Administration"
+            ],
+
+            "trunk"
+        )
+    )
 
     return routes

@@ -1,49 +1,81 @@
-import networkx as nx
-
-from simulation.city_graph import city_graph
 from simulation.routes import Route
-
-
-express_hubs = [
-
-    "Cathedral City Center 1",
-
-    "Central Hub Station",
-
-    "University of Technology",
-
-    "Harbour Distribution Centre",
-
-    "Media Centre Astra"
-]
 
 
 def generate_express_routes():
 
     routes = []
 
-    for i in range(len(express_hubs)):
+    # =====================================
+    # CBD ↔ HARBOUR
+    # =====================================
 
-        for j in range(i + 1, len(express_hubs)):
+    routes.append(
 
-            try:
+        Route(
 
-                path = nx.shortest_path(
-                    city_graph,
-                    express_hubs[i],
-                    express_hubs[j]
-                )
+            [
 
-                filtered = path[::2]
+                "Cathedral City Center 1",
 
-                if path[-1] not in filtered:
-                    filtered.append(path[-1])
+                "Main Station",
 
-                routes.append(
-                    Route(filtered, "express")
-                )
+                "Fishers Ground",
 
-            except:
-                pass
+                "Harbour Distribution Centre"
+            ],
+
+            "express",
+
+            express=True
+        )
+    )
+
+    # =====================================
+    # CBD ↔ UNIVERSITY
+    # =====================================
+
+    routes.append(
+
+        Route(
+
+            [
+
+                "Cathedral City Center 1",
+
+                "Central Hub Station",
+
+                "University of Technology"
+            ],
+
+            "express",
+
+            express=True
+        )
+    )
+
+    # =====================================
+    # CBD ↔ ASTRA
+    # =====================================
+
+    routes.append(
+
+        Route(
+
+            [
+
+                "Cathedral City Center 1",
+
+                "Main Station",
+
+                "Fishers Ground",
+
+                "Media Centre Astra"
+            ],
+
+            "express",
+
+            express=True
+        )
+    )
 
     return routes

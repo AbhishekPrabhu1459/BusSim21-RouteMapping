@@ -1,15 +1,10 @@
 class Route:
 
     def __init__(
-
         self,
-
         stops,
-
         route_type,
-
-        frequency=1,
-
+        frequency=10,
         express=False
     ):
 
@@ -25,20 +20,12 @@ class Route:
 
         self.unique_stops = len(set(stops))
 
-
     def __repr__(self):
 
         return (
-
             f"\nRoute(\n"
-
             f"  type={self.route_type},\n"
-
             f"  stops={self.stop_count},\n"
-
-            f"  frequency={self.frequency},\n"
-
-            f"  express={self.express}\n"
-
+            f"  frequency={self.frequency}\n"
             f")"
         )

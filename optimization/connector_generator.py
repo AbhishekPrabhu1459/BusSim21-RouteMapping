@@ -1,83 +1,96 @@
-import networkx as nx
-
-from simulation.city_graph import city_graph
 from simulation.routes import Route
-
-from data.hub_data import suburb_hubs
-from data.district_connections import (
-    district_connections
-)
 
 
 def generate_connector_routes():
 
     routes = []
 
-    visited = set()
+    # =====================================
+    # WESTFIELD TO CORE
+    # =====================================
 
-    for district, neighbors in district_connections.items():
+    routes.append(
 
-        for neighbor in neighbors:
+        Route(
 
-            pair = tuple(sorted([
-                district,
-                neighbor
-            ]))
+            [
 
-            if pair in visited:
-                continue
+                "Westfield",
 
-            visited.add(pair)
+                "Westfield Corn Towers",
 
-            try:
+                "High Road",
 
-                start = suburb_hubs[district]
+                "Main Station"
+            ],
 
-                middle = suburb_hubs[neighbor]
+            "connector"
+        )
+    )
 
-                extended_neighbors = district_connections.get(
-                    neighbor,
-                    []
-                )
+    # =====================================
+    # ASTRA TO INDUSTRIAL
+    # =====================================
 
-                target = None
+    routes.append(
 
-                for option in extended_neighbors:
+        Route(
 
-                    if option != district:
+            [
 
-                        target = option
-                        break
+                "Media Centre Astra",
 
-                if not target:
-                    continue
+                "Siegwalden Lido",
 
-                end = suburb_hubs[target]
+                "Fishers Ground"
+            ],
 
-                path1 = nx.shortest_path(
-                    city_graph,
-                    start,
-                    middle
-                )
+            "connector"
+        )
+    )
 
-                path2 = nx.shortest_path(
-                    city_graph,
-                    middle,
-                    end
-                )
+    # =====================================
+    # OAKVILLE CONNECTOR
+    # =====================================
 
-                full_path = path1 + path2[1:]
+    routes.append(
 
-                if len(full_path) >= 15:
+        Route(
 
-                    routes.append(
-                        Route(
-                            full_path,
-                            "connector"
-                        )
-                    )
+            [
 
-            except:
-                pass
+                "Oakville Central",
+
+                "Siegwalden",
+
+                "Radovanovic Bridge",
+
+                "Cathedral City Center 1"
+            ],
+
+            "connector"
+        )
+    )
+
+    # =====================================
+    # AGRICULTURE CONNECTOR
+    # =====================================
+
+    routes.append(
+
+        Route(
+
+            [
+
+                "Corn Street Agriculture Centre",
+
+                "Fishers Ground",
+
+                "Main Station"
+            ],
+
+            "connector"
+        )
+    )
 
     return routes

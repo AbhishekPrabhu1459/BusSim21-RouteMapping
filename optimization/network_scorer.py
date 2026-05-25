@@ -1,57 +1,75 @@
-from optimization.redundancy_checker import (
-    redundancy_score
-)
-
-from optimization.transfer_optimizer import (
-    average_transfer_distance
-)
-
-from optimization.connectivity_checker import (
-    network_fully_connected
+from simulation.passenger_patterns import (
+    estimate_stop_demand
 )
 
 
-def score_network(routes, city_graph):
+def score_network(routes):
 
     score = 0
 
+    all_stops = set()
+
+    for route in routes:
+
+        all_stops.update(route.stops)
+
+        # =====================================
+        # DEMAND COVERAGE
+        # =====================================
+
+        for stop in route.stops:
+
+            score += (
+
+                estimate_stop_demand(
+                    stop,
+                    "morning"
+                ) * 10
+            )
+
+        # =====================================
+        # EXPRESS BONUS
+        # =====================================
+
+        if route.route_type == "express":
+
+            score += 500
+
+        # =====================================
+        # TRUNK BONUS
+        # =====================================
+
+        if route.route_type == "trunk":
+
+            score += 300
+
+        # =====================================
+        # LOOP PENALTY
+        # =====================================
+
+        duplicates = (
+
+            len(route.stops)
+            - len(set(route.stops))
+        )
+
+        score -= duplicates * 100
+
+        # =====================================
+        # EXCESSIVE LENGTH PENALTY
+        # =====================================
+
+        if len(route.stops) > 20:
+
+            score -= (
+
+                len(route.stops) - 20
+            ) * 80
+
     # =====================================
-    # CONNECTIVITY
+    # COVERAGE BONUS
     # =====================================
 
-    if network_fully_connected(
-        routes,
-        city_graph
-    ):
-
-        score += 5000
-
-    else:
-
-        score -= 5000
-
-    # =====================================
-    # TRANSFER EFFICIENCY
-    # =====================================
-
-    avg_distance = average_transfer_distance(
-        routes
-    )
-
-    score += max(0, 3000 - avg_distance * 30)
-
-    # =====================================
-    # ROUTE COUNT BONUS
-    # =====================================
-
-    score += len(routes) * 50
-
-    # =====================================
-    # REDUNDANCY
-    # =====================================
-
-    redundancy = redundancy_score(routes)
-
-    score -= redundancy * 2
+    score += len(all_stops) * 50
 
     return score
